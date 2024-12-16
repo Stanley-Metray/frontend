@@ -1,4 +1,5 @@
-import Products from "./Products";
+// import Products from "./Products";
+import State from "./State";
 
 // const bodyStyle = {
 //     height : '100vh',
@@ -6,7 +7,7 @@ import Products from "./Products";
 
 const Body = ()=>{
     return <>
-        <Products/>
+        <State/>
     </>
 }
 
