@@ -1,13 +1,12 @@
 // import Products from "./Products";
-import State from "./State";
-
+import Time from "./Time";
 // const bodyStyle = {
 //     height : '100vh',
 // }
 
 const Body = ()=>{
     return <>
-        <State/>
+        <Time title='Latest Time'/>
     </>
 }
 
