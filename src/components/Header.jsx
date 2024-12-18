@@ -1,14 +1,50 @@
+import { NavLink } from 'react-router-dom';
 
-const headerStyle = {
-    height : '50px',
-}
+const Header = () => {
+    return (
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="container-fluid">
+                {/* Branding */}
+                <NavLink className="navbar-brand" to="/">BrowserRouter</NavLink>
+                
+                {/* Collapse button for smaller screens */}
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
 
-const Header = ()=>{
-    return <>
-        <div className='text-white bg-primary d-flex flex-column justify-content-center align-items-center' style={headerStyle}>
-            React components example
-        </div>
-    </>
-}
+                {/* Navigation items */}
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <NavLink 
+                                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} 
+                                aria-current="page" 
+                                to="/"
+                            >
+                                Home
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} 
+                                to="/about"
+                            >
+                                About
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} 
+                                to="/contact"
+                            >
+                                Contact
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    );
+};
 
 export default Header;
