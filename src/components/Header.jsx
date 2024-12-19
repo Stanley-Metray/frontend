@@ -48,6 +48,14 @@ const Header = () => {
                                 Movies
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} 
+                                to="/search"
+                            >
+                                Search
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </div>
