@@ -12,7 +12,7 @@ const Movies = ()=>{
             <NavLink to='/movies/Comedy/2023' className='btn btn-primary' >Comedy</NavLink>
             <NavLink to='/movies/Drama/2023' className='btn btn-primary' >Drama</NavLink>
         </div>
-        
+        <br/>
         <Movie genere={genere} year={year}/>
     </>
 } 
