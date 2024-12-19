@@ -40,6 +40,14 @@ const Header = () => {
                                 Contact
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} 
+                                to="/movies/Fantasy/2024"
+                            >
+                                Movies
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </div>
