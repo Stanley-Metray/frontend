@@ -1,7 +1,8 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
-const Header = () => {
+const HomeLayout = () => {
     return (
+        <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                 {/* Branding */}
@@ -43,9 +44,9 @@ const Header = () => {
                         <li className="nav-item">
                             <NavLink 
                                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} 
-                                to="/movies/Fantasy/2024"
+                                to="/user"
                             >
-                                Movies
+                                User
                             </NavLink>
                         </li>
                         <li className="nav-item">
@@ -60,7 +61,9 @@ const Header = () => {
                 </div>
             </div>
         </nav>
+        <Outlet/>
+        </>
     );
 };
 
-export default Header;
+export default HomeLayout;
